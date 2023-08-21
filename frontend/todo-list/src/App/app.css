@@ -1,0 +1,105 @@
+.container{
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    background-color: rgb(17, 35, 236);
+}
+.container h1 , .container h3{
+    font-size: 3em;
+    font-weight: 500;
+    color: white;
+}   
+
+.container form{
+    min-height: 40px;
+    min-width: 300px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container form input{
+    width: 400px;
+    outline: none;
+    padding: 5px;
+    font-weight: 500;
+    font-size: 1.1em;
+    border:none;
+    border-bottom: 1px solid black ;
+}
+
+.button {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgb(17, 35, 236);
+  transition: all 500ms;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid rgb(17, 35, 236);
+  cursor: pointer;
+}
+
+button:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  outline: 2px solid rgb(17, 35, 236);
+  box-shadow: 2px 3px 10px -2px rgb(17, 35, 236);
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(17, 35, 236);
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 500ms;
+}
+
+button:hover::before {
+  width: 200%;
+}
+
+ul{
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    background-color: white;
+    overflow-y: scroll;
+    height: 500px;
+    list-style: none;
+    border-radius: 10px;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    padding: 10px;
+}
+
+.button-container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
