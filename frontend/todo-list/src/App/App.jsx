@@ -8,7 +8,7 @@ function App() {
 const [ task , setTask ] = useState('')
 const [ data , setData ] = useState([])
 const [ update , setUpdate ] = useState(false)
-const [ id , setId ] = useState('')
+const [ savedId , setId ] = useState('')
 
 
 useEffect(()=>{
@@ -60,7 +60,7 @@ const updateTask = (id)=>{
                 onChange={(e)=>setTask(e.target.value)}
                 placeholder='Write Your Task'
             />
-            <button className='button' onClick={update ? ()=>{updateTask(id)} : postTask}>{ update ? "Update Task" : "Add Task" }</button>
+            <button className='button' onClick={update ? ()=>{updateTask(savedId)} : postTask}>{ update ? "Update Task" : "Add Task" }</button>
         </form>
         <ul>
             {

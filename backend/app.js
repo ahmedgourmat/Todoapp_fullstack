@@ -8,9 +8,7 @@ const connectDB = require('./db/activate')
 
 require('dotenv').config()
 
-const routes = require('./routes/routers')
-
-port = process.env.PORT 
+const routes = require('./routes/routers') 
 
 app.use(express.json())
 
@@ -25,8 +23,8 @@ app.use( '/api/v2/tasks' , routes )
 const start = async()=>{
     try {
         await connectDB(process.env.MONGODB_URI)
-        app.listen( port , ()=>{
-            console.log(`The Server Is Listening To The Port ${port}`)
+        app.listen( process.env.PORT , ()=>{
+            console.log(`The Server Is Listening To The Port ${process.env.PORT}`)
         })
     } catch (error) {
         console.log(error)
